@@ -1,27 +1,23 @@
 function [Phi_int,f,H]= Interpl_3D(X,X_max,Y_max,Z_max,step_grid,Phi_3d,Interp_type)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Params:
-%  1.  X -> 3D point at wich the interpolation is computed
-%  2. {X_max,Y_max,Z_max} -> extremes coordinates of the grid (Half lenght of the box).
-%  3. Phi_3d -> points over which funtion Phi is known belongin to
-%               (belonging to the equi-spaced grid of side {X_max,Y_max,Z_max})
-%  4. step_grid -> dimension of the elements of the equipaced grid
-%                  a.k.a. the distance between                
-%               
+%Params
+%  1. X -> 3D point at wich the interpolation is computed
+%  2.{X_max,Y_max,Z_max} -> extremes coordinates of the grid (Half lenght of the box).
+%  3.Phi_3d -> points over which fucntion Phi 
+%  4.step_grid -> dimension of the elements ofthe equipaced grid, 
+
 %                  
 %  
-%
+
 % CHOOSE: Interp_type=0 ---> nearest neighbor interpolation
-%         Interp_type=1 ---> tri-linear interpolation (function will
+%          Interp_type=1 ---> tri-linear interpolation (function will
 %                                                    belong to C-1 class.)
-%         Interp_type=2 -->tri-cubic interpolation (function will belong
+%          Interp_type=2 -->tri-cubic interpolation (function will belong
 %                                                           to C-2 class.)
-%
-% Outputs:
-%   1. Phi_int -> fucntion evaluated @X (out of grid's nodes)
-%   2. f -> Gradient of Phi evaluated @X ( out of grid's nodes)
-%   3. H -> Hessian matrix evaluated @X ( out of grid's nodes)
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
